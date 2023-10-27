@@ -1,3 +1,4 @@
+import AbstractView from "./views/AbstractView.js";
 import Nosotros from "./views/Nosotros.js";
 import Main from "./views/Main.js";
 import Servicios from "./views/Servicios.js";
