@@ -1,3 +1,6 @@
+import Nosotros from "./views/Nosotros.js";
+import Main from "./views/Main.js";
+import Servicios from "./views/Servicios.js";
 const navigateTo = url => {
     history.pushState(null, null, url);
     router();
@@ -5,9 +8,9 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: () => console.log("Viewing Nosotros") },
-        { path: "/", view: () => console.log("Viewing Posts") },
-        { path: "/", view: () => console.log("Viewing Settings") },
+        { path: "/", view: Nosotros },
+        { path: "/", view: Main},
+        { path: "/", view: Servicios},
     ];
 
     //Route every match
@@ -27,7 +30,9 @@ const router = async () => {
         };
     }
 
-    console.log(potentialMatches);
+    const view = new match.route.view();
+    
+    document.querySelector("#app").innerHTML =await view.getHtml();
 };
 
 window.addEventListener("popstate", router);
