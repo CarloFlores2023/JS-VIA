@@ -2,12 +2,145 @@ import AbstractView from "./AbstractView.js";
 
 export default class extends AbstractView {
     constructor() {
+      super();
         this.setTitle("Nosotros");
     }
 
     async getHtml() {
         return `
-        
+        <main id="main">
+
+    <!-- section -->
+
+    <section class="text-gray-600 body-font py-24">
+      <div class="container flex flex-wrap px-5 py-4 mx-auto items-center">
+        <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-blue-200">
+          <div class="text-center">
+            <h2 class="text-4xl text-gray-500 font-bold mb-4">Nosotros</h2>
+          </div>
+
+          <div class="flex justify-center mb-4">
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-sm">
+              <img class=" w-full h-96 md:h-60 object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg mt-4"
+                src="assets/img/svg/company.svg" alt="" />
+              <div class="p-6 flex flex-col justify-start">
+                <p class="text-gray-700 text-base mb-4">
+                  Somos una empresa que nace en 2001, dedicada
+                  al análisis, diseño y soluciones de negocios, a través de herramientas tecnológicas de calidad
+                  mundial.
+                  Somos un equipo de profesionales multidisciplinarios, especializados en diferentes materias
+                  relacionadas a
+                  la Administración de Negocios, Tecnología, Desarrollo de Software, Marketing, entre otros.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="flex justify-center mb-4">
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-sm">
+              <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                src="assets/img/svg/company2.svg" alt="" />
+              <div class="p-6 flex flex-col justify-start">
+                <p class="text-gray-700 text-base mb-4">
+                  Nuestra cartera de productos y servicios permite la mejora de procesos, de la productividad y
+                  eficiencia; así como la toma de decisiones oportuna para una mejora continua en diferentes tipos de
+                  industria.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mb-4">
+            <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-sm">
+              <img class=" w-full h-96 md:h-60 object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg mt-20"
+                src="assets/img/svg/company3.svg" alt="" />
+              <div class="p-6 flex flex-col justify-start">
+                <p class="text-gray-700 text-base mb-4">
+                  Nuestros aliados de negocios (clientes) están relacionados a la Banca, Salud, Energía,
+                  Telecomunicaciones, Agro-industria, Retail, Seguros, Cámaras y Gremiales, entre otros, tanto a nivel
+                  nacional e internacional. Esta diversidad de aliados responde a que los productos son adaptables a
+                  diferentes industrias. La Innovación es parte de nuestro ADN empresarial, es por ello que estamos en
+                  constante crecimiento y trabajando bajo estándares de calidad a nivel mundial. Nuestros productos bajo
+                  la marca ORBIS son:
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col md:w-1/2 md:pl-12">
+          <img src="assets/img/orbis/Orbis-Technology-VIASA-456x293.png" alt="">
+          <img class=" " src="assets/img/svg/phone.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- End main -->
+
+  <section class="text-gray-200 body-font bg-blue-400">
+    <div class="container flex flex-wrap px-5  mx-auto items-center">
+      <div class="flex flex-col md:w-1/2 md:pl-12">
+        <img src="assets/img/svg/Smartphone data_Monochromatic.svg" alt="">
+      </div>
+      <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
+        <p class="sm:text-2xl text-2xl font-medium title-font mb-2 text-gray-200">contamos con equipo altamente
+          capacitado en el desarrollo outsourcing en tecnologías: Oracle Developer, .NET, PHP, Java, Python y otros.</p>
+      </div>
+  </section>
+
+  <section class="text--600 body-font ">
+    <div class="container px-5  mx-auto">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold text-gray-500 mb-20 pt-20">Productos y Servicios</h2>
+      </div>
+      <div class="flex flex-wrap mb-20">
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="border-l-4 border-blue-500 p-6 rounded-lg hover:border-blue-200">
+            <h2 class="text-lg text-blue-500 font-medium title-font mb-2 ">ERP:</h2>
+            <p class="leading-relaxed text-base">conjunto de programas integrados que apoya y eficientiza las
+              principales actividades de la organización tales como producción y logística, finanzas y contabilidad,
+              ventas y recursos humanos</p>
+          </div>
+        </div>
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="border-l-4 border-blue-500 p-6 rounded-lg hover:border-blue-200">
+            <h2 class="text-lg text-blue-500 font-medium title-font mb-2">Smart Operation:</h2>
+            <p class="leading-relaxed text-base">Control de staff operativo en ruta que permite verificar en cada
+              usuario sus ubicaciones, desarrollo y tareas de las visitas establecidas, así como el inventario
+              utilizado.</p>
+          </div>
+        </div>
+        <div class="xl:w-1/3 md:w-1/2 p-4">
+          <div class="border-l-4 border-blue-500 p-6 rounded-lg hover:border-blue-200">
+            <h2 class="text-lg text-blue-500 font-medium title-font mb-2">Smart Analytics:</h2>
+            <p class="leading-relaxed text-base">Plataforma de Inteligencia de Negocios (BI) de sencilla adaptación
+              según las necesidades de cada empresa, obteniendo indicadores de valor para los diferentes niveles de
+              administración de la operación del negocio.</p>
+          </div>
+        </div>
+
+        <div class="p-4 md:w-1/2 xl:w-1/3">
+          <div class="rounded-lg border-l-4 border-blue-500 p-6 hover:border-blue-200">
+            <h2 class="title-font mb-2 text-lg font-medium text-blue-500">Expedientes:</h2>
+            <p class="text-base leading-relaxed">conocido también como Workflow o Business Process Management. Permite
+              llevar el control de la documentación que ingresa a una oficina o empresa, asignando responsables,
+              tiempos, por proceso y por fase, pudiendo adjuntar documentos de respaldo, informando al cliente o usuario
+              sobre el avance de su requerimiento.</p>
+          </div>
+        </div>
+        <div class="p-4 md:w-1/2 xl:w-1/3">
+          <div class="rounded-sm border-l-4 border-blue-500 p-6 hover:border-blue-200">
+            <h2 class="title-font mb-2 text-lg font-medium text-blue-500">Comercializadora Eléctrica</h2>
+            <p class="text-base leading-relaxed">permite administrar la facturación a los clientes, separando energía,
+              potencia y cobro de terceros. Capacidad para realizar cobros por medio de fórmulas para clientes o grupo
+              de clientes, generación de información por cliente para autoservicio y control de cuentas por cobrar.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
         `;
     }
 }
