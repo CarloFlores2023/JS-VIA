@@ -9,42 +9,42 @@ const navigateTo = url => {
 
 const router = async () => {
     const routes = [
-        { path: "/", view: Nosotros },
-        { path: "/", view: Main},
-        { path: "/", view: Servicios},
+        { path: "/Main", view: Main},
+        { path: "/Nosotros", view: Nosotros},
+        { path: "/Servicios", view: Servicios},
     ];
 
-    //Route every match
-    const potentialMatches = route.map(route => {
-        return {
-            route: route,
-            isMatch: location.pathname === route.path
-        };
-    });
+ // Try every route
+ const potentialMatches = routes.map(route => {
+    return {
+        route: route,
+        result: location.pathname.match(pathToRegex(route.path))
+    };
+});
 
-    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+let match = potentialMatches.find(potentialMatch => potentialMatch.result !== null);
 
-    if (!match){
-        match = {
-            route: routes[0],
-            isMatch: true
-        };
-    }
+if (!match) {
+    match = {
+        route: routes[0],
+        result: [location.pathname]
+    };
+}
 
-    const view = new match.route.view();
-    
-    document.querySelector("#app").innerHTML =await view.getHtml();
+const view = new match.route.view(getParams(match));
+
+document.querySelector("#app").innerHTML = await view.getHtml();
 };
 
 window.addEventListener("popstate", router);
 
-document.addEventListener("DOMContentLoaded", ()=> {
+document.addEventListener("DOMContentLoaded", () => {
 document.body.addEventListener("click", e => {
     if (e.target.matches("[data-link]")) {
         e.preventDefault();
         navigateTo(e.target.href);
     }
-    });
+});
 
 router();
 });
