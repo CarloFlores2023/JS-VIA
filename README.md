@@ -1,2 +1,2 @@
 # JS-VIA
-- Mock-up of a site
+- El código está ahí pero no sé como hacer que funcione
